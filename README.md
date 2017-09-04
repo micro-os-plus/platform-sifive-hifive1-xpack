@@ -1,2 +1,2 @@
-# sifive-hifive1-board
-An xPack with the µOS++ support for the SiFive HiFive1 board
+This project does not use the `master` branch, please
+switch to the `xpack` branch to get the project files.
