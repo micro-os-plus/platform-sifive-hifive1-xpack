@@ -17,7 +17,7 @@ This section is intended to developers who plan to include this library in their
 The source files are available from [GitHub](https://github.com/micro-os-plus/sifive-hifive1-board):
 
 ```bash
-$ git clone https://github.com/micro-os-plus/sifive-hifive1-board.git sifive-coreplex-hifive1-board.git
+$ git clone https://github.com/micro-os-plus/sifive-hifive1-board.git sifive-hifive1-board.git
 ```
 
 The library will shortly be available from the npm registry:
