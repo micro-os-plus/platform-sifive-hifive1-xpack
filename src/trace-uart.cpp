@@ -47,15 +47,15 @@ namespace os
     {
       // IOF0_UART0_MASK is defined only for FE310
       // TODO: check if this is correct.
-      GPIO_REG(GPIO_IOF_SEL) &= ~IOF0_UART0_MASK;
+      riscv_device_gpio_ptr->iof_sel &= ~IOF0_UART0_MASK;
       // Enable.
-      GPIO_REG(GPIO_IOF_EN) |= IOF0_UART0_MASK;
+      riscv_device_gpio_ptr->iof_en |= IOF0_UART0_MASK;
 
       // Set baud rate.
-      UART0_REG(UART_REG_DIV) = (riscv::core::running_frequency_hz ()
-                              / OS_INTEGER_TRACE_UART0_BAUD_RATE) - 1;
+      riscv_device_uart0_ptr->div = (riscv::core::running_frequency_hz ()
+          / OS_INTEGER_TRACE_UART0_BAUD_RATE) - 1;
       // Enable transmitter.
-      UART0_REG(UART_REG_TXCTRL) |= UART_TXEN;
+      riscv_device_uart0_ptr->txctrl |= UART_TXEN;
 
       // Wait a bit to avoid corruption on the UART.
       // (In some cases, switching to the IOF can lead
@@ -88,15 +88,15 @@ namespace os
           if (ch == '\n')
             {
               // Wait until FIFO is ready...
-              while ((int32_t) UART0_REG(UART_REG_TXFIFO) < 0)
+              while ((int32_t) riscv_device_uart0_ptr->txdata < 0)
                 ;
-              UART0_REG(UART_REG_TXFIFO) = '\r';
+              riscv_device_uart0_ptr->txdata = '\r';
             }
 
           // Wait until FIFO is ready...
-          while ((int32_t) UART0_REG(UART_REG_TXFIFO) < 0)
+          while ((int32_t) riscv_device_uart0_ptr->txdata < 0)
             ;
-          UART0_REG(UART_REG_TXFIFO) = ch;
+          riscv_device_uart0_ptr->txdata = ch;
         }
 
       // All characters successfully sent.
