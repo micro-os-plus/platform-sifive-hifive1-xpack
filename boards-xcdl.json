@@ -26,7 +26,7 @@
 					"interface": "spi0",
 					"memoryRegion": "rom"
 				},
-                "hfxtal": "16 MHz",
+				"hfxtal": "16 MHz",
 				"lfxtal": "32768 Hz"
 			},
 			"debug": {
