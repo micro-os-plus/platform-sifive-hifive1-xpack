@@ -11,12 +11,15 @@
     "type": "git",
     "url": "git+https://github.com/micro-os-plus/sifive-hifive1-board.git"
   },
+  "homepage": "https://github.com/micro-os-plus/sifive-hifive1-board",
   "keywords": [
+    "xpack",
     "c++",
     "micro-os-plus",
     "sifive",
     "hifive1",
     "risc-v",
+    "riscv",
     "board"
   ],
   "author": {
@@ -29,9 +32,10 @@
     "url": "https://github.com/micro-os-plus/sifive-hifive1-board/issues"
   },
   "config": {},
-  "dependencies": {
-    "@sifive/coreplex-devices": "^0.0.4"
-  },
-  "xpack": {},
-  "homepage": "https://github.com/micro-os-plus/sifive-hifive1-board"
+  "dependencies": {},
+  "xpack": {
+    "dependencies": {
+      "@sifive/coreplex-devices": "~0.0.5"
+    }
+  }
 }
