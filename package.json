@@ -9,9 +9,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/micro-os-plus/sifive-hifive1-board.git"
+    "url": "git+https://github.com/micro-os-plus/sifive-hifive1-board-xpack.git"
   },
-  "homepage": "https://github.com/micro-os-plus/sifive-hifive1-board",
+  "homepage": "https://github.com/micro-os-plus/sifive-hifive1-board-xpack",
   "keywords": [
     "xpack",
     "c++",
@@ -29,13 +29,13 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/micro-os-plus/sifive-hifive1-board/issues"
+    "url": "https://github.com/micro-os-plus/sifive-hifive1-board-xpack/issues"
   },
   "config": {},
   "dependencies": {},
   "xpack": {
     "dependencies": {
-      "@sifive/coreplex-devices": "~0.0.5"
+      "@sifive/devices": "~0.1.0"
     }
   }
 }
