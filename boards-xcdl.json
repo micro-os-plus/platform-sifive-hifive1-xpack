@@ -17,13 +17,13 @@
 			"installedDevice": {
 				"vendor": "sifive",
 				"id": "1",
-				"name": "fe310-g000"
+				"name": "fe310"
 			},
 			"compatibleDevices": [],
 			"features": {
 				"flash": {
 					"size": "128 Mb",
-					"interface": "spi0",
+					"interface": "qspi0",
 					"memoryRegion": "rom"
 				},
 				"hfxtal": "16 MHz",
@@ -34,7 +34,7 @@
 				"connector": "micro-usb",
 				"openocd": "-f &quot;board/sifive-freedom-e300-hifive1.cfg&quot;",
 				"jlink": {
-				    "device": "fe310-g000"
+				    "device": "fe310"
 				}
 			},
 			"compile": {
