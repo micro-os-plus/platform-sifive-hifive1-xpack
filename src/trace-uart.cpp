@@ -46,17 +46,16 @@ namespace os
     initialize (void)
     {
       // IOF0_UART0_MASK is defined only for FE310
-      // TODO: check if this is correct.
-      riscv_device_gpio_ptr->iof_sel &= ~IOF0_UART0_MASK;
+      GPIO->iofsel &= ~IOF0_UART0_MASK;
       // Enable.
-      riscv_device_gpio_ptr->iof_en |= IOF0_UART0_MASK;
+      GPIO->iofen |= IOF0_UART0_MASK;
 
       // Set baud rate.
-      riscv_device_uart0_ptr->div = (riscv::core::running_frequency_hz ()
+      UART0->div = (riscv::core::running_frequency_hz ()
           / OS_INTEGER_TRACE_UART0_BAUD_RATE) - 1;
       // Enable transmitter.
-      riscv_device_uart0_ptr->txctrl |= UART_TXEN;
-
+      UART0->txctrl_bits.txen = 1;
+      
       // Wait a bit to avoid corruption on the UART.
       // (In some cases, switching to the IOF can lead
       // to output glitches, so need to let the UART
@@ -88,15 +87,16 @@ namespace os
           if (ch == '\n')
             {
               // Wait until FIFO is ready...
-              while ((int32_t) riscv_device_uart0_ptr->txdata < 0)
+              // Without handshake, should not block.
+              while (UART0->txdata_bits.full)
                 ;
-              riscv_device_uart0_ptr->txdata = '\r';
+              UART0->txdata_bits.data = '\r';
             }
 
           // Wait until FIFO is ready...
-          while ((int32_t) riscv_device_uart0_ptr->txdata < 0)
+          while (UART0->txdata_bits.full)
             ;
-          riscv_device_uart0_ptr->txdata = ch;
+          UART0->txdata_bits.data = ch;
         }
 
       // All characters successfully sent.

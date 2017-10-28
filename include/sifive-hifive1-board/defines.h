@@ -32,7 +32,7 @@
 
 #if defined(SIFIVE_HIFIVE1_BOARD)
 #else
-#error "Only SIFIVE_HIFIVE1_BOARD is supported."
+#error "Only the SIFIVE_HIFIVE1_BOARD is supported."
 #endif /* _BOARD */
 
 #define RISCV_BOARD_RTC_FREQUENCY_HZ		(32768)
@@ -102,9 +102,7 @@
 // to GPIO18. The button is active low.
 #define BUTTON_0_OFFSET  18
 
-#define INT_DEVICE_BUTTON_0 (INT_GPIO_BASE + BUTTON_0_OFFSET)
-
-#define RTC_FREQ 32768
+#define INT_DEVICE_BUTTON_0 (sifive_fe310_interrupt_global_gpio0 + BUTTON_0_OFFSET)
 
 // ----------------------------------------------------------------------------
 
