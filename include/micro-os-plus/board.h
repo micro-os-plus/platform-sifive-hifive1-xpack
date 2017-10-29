@@ -34,6 +34,7 @@
 
 // Include common declarations.
 #include <riscv-arch/board-functions.h>
+#include <riscv-arch/board-functions-inlines.h>
 
 #include <sifive-hifive1-board/functions.h>
 #include <sifive-hifive1-board/functions-inlines.h>

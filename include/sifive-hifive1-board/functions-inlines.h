@@ -31,7 +31,7 @@
 #include <stdint.h>
 
 /*
- * Freedom E300 HiFive1 support functions.
+ * HiFive1 support functions.
  *
  * Inline functions are first defined in C (prefixed with `riscv_board_`),
  * then, for convenience, are redefined in C++ in the `riscv::board::`
@@ -46,12 +46,6 @@ extern "C"
 {
 #endif /* defined(__cplusplus) */
 
-  static inline uint32_t
-  __attribute__((always_inline))
-  riscv_board_get_rtc_frequency_hz (void)
-  {
-    return RISCV_BOARD_RTC_FREQUENCY_HZ;
-  }
 
 #if defined(__cplusplus)
 }
@@ -67,12 +61,6 @@ namespace riscv
   {
     // ------------------------------------------------------------------------
 
-    uint32_t
-    inline __attribute__((always_inline))
-    rtc_frequency_hz (void)
-    {
-      return riscv_board_get_rtc_frequency_hz ();
-    }
 
   } /* namespace board */
 
