@@ -45,10 +45,12 @@ namespace os
     void
     initialize (void)
     {
-      // IOF0_UART0_MASK is defined only for FE310
-      GPIO->iofsel &= ~IOF0_UART0_MASK;
-      // Enable.
-      GPIO->iofen |= IOF0_UART0_MASK;
+      // Select IOF0 for UART0 RX & TX pins.
+      GPIO->iofsel &= ~(SIFIVE_FE310_GPIO_IOF0_UART0_RX | 
+        SIFIVE_FE310_GPIO_IOF0_UART0_TX);
+      // Enable IOF for UART0 RX & TX pins.
+      GPIO->iofen |= (SIFIVE_FE310_GPIO_IOF0_UART0_RX | 
+        SIFIVE_FE310_GPIO_IOF0_UART0_TX);
 
       // Set baud rate.
       UART0->div = (riscv::core::running_frequency_hz ()
