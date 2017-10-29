@@ -33,7 +33,7 @@
 #include <stdint.h>
 
 /*
- * Freedom E300 HiFive1 support functions.
+ * HiFive1 support functions.
  *
  * Inline functions are first defined in C (prefixed with `riscv_board_`),
  * then, for convenience, are redefined in C++ in the `riscv::board::`
@@ -48,7 +48,11 @@ extern "C"
 {
 #endif /* defined(__cplusplus) */
 
-// ...
+// --------------------------------------------------------------------------
+// Board support functions in C.
+
+// TODO: add functions.
+// Prefix them with `riscv_board_`.
 
 #if defined(__cplusplus)
 }
@@ -63,8 +67,9 @@ namespace riscv
   namespace board
   {
   // ------------------------------------------------------------------------
+  // Board support functions in C++.
 
-  // ...
+  // TODO: add functions.
 
   } /* namespace board */
 // ----------------------------------------------------------------------------

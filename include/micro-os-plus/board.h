@@ -36,7 +36,8 @@
 #include <riscv-arch/board-functions.h>
 #include <riscv-arch/board-functions-inlines.h>
 
-#include <sifive-hifive1-board/functions.h>
-#include <sifive-hifive1-board/functions-inlines.h>
+// Currently not used.
+// #include <sifive-hifive1-board/functions.h>
+// #include <sifive-hifive1-board/functions-inlines.h>
 
 #endif /* MICRO_OS_PLUS_BOARD_H_ */
