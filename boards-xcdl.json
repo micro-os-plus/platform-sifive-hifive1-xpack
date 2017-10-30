@@ -32,7 +32,7 @@
 			"debug": {
 				"interface": "ftdi",
 				"connector": "micro-usb",
-				"openocd": "-f &quot;board/sifive-freedom-e300-hifive1.cfg&quot;",
+				"openocd": "-f &quot;board/sifive-hifive1.cfg&quot;",
 				"jlink": {
 				    "device": "fe310"
 				}
