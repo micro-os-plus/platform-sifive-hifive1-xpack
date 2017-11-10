@@ -1,6 +1,6 @@
 {
   "name": "@sifive/hifive1-board",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An xPack with the µOS++ support for the SiFive HiFive1 board",
   "main": "",
   "scripts": {
