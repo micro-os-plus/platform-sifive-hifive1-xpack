@@ -56,7 +56,7 @@ namespace os
       UART0->div = (riscv::core::running_frequency_hz ()
           / OS_INTEGER_TRACE_UART0_BAUD_RATE) - 1;
       // Enable transmitter.
-      UART0->txctrl_bits.txen = 1;
+      UART0->txctrl |= SIFIVE_FE310_UART_TXCTRL_TXEN;
       
       // Wait a bit to avoid corruption on the UART.
       // (In some cases, switching to the IOF can lead
@@ -90,15 +90,15 @@ namespace os
             {
               // Wait until FIFO is ready...
               // Without handshake, should not block.
-              while (UART0->txdata_bits.full)
+              while ((UART0->txdata | SIFIVE_FE310_UART_TXDATA_FULL) != 0)
                 ;
-              UART0->txdata_bits.data = '\r';
+              UART0->txdata = '\r';
             }
 
           // Wait until FIFO is ready...
-          while (UART0->txdata_bits.full)
+          while ((UART0->txdata | SIFIVE_FE310_UART_TXDATA_FULL) != 0)
             ;
-          UART0->txdata_bits.data = ch;
+          UART0->txdata = ch;
         }
 
       // All characters successfully sent.
