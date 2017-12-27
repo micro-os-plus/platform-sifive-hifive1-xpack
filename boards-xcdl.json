@@ -1,22 +1,19 @@
 {
-	"schemaVersion": "0.1.0",
+	"schemaVersion": "0.2.0",
 	"boards": {
 		"hifive1": {
+			"displayName": "HiFive1",
+			"description": "The HiFive1 is an Arduino-Compatible development kit featuring the Freedom E310, the industry’s first commercially available RISC-V SoC.",
 			"supplier": {
-				"name": "sifive",
-				"id": "1",
 				"displayName": "SiFive",
-				"fullName": "SiFive, Inc.",
-				"contact": "info@sifive.com"
+				"id": "1"
 			},
 			"revision": "A01",
 			"url": "https://www.sifive.com/products/hifive1/",
 			"orderForm": "https://www.crowdsupply.com/sifive/hifive1/",
-			"displayName": "HiFive1",
-			"description": "The HiFive1 is an Arduino-Compatible development kit featuring the Freedom E310, the industry’s first commercially available RISC-V SoC.",
 			"installedDevice": {
 				"supplier": {
-					"name": "sifive",
+					"displayName": "SiFive",
 					"id": "1"
 				},
 				"name": "fe310"
@@ -39,11 +36,11 @@
 				    "device": "fe310"
 				}
 			},
-			"compile": {
+			"compiler": {
 				"headers": [
 					"<micro-os-plus/board.h>"
 				],
-				"macros": [
+				"defines": [
 					"SIFIVE_HIFIVE1_BOARD"
 				]
 			}
