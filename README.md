@@ -8,6 +8,10 @@ The standard way to include the board files is
 #include <micro-os-plus/board.h>
 ```
 
+### Macros
+
+* `SIFIVE_HIFIVE1_BOARD`
+
 ## Developer info
 
 This section is intended to developers who plan to include this library in their own projects.
