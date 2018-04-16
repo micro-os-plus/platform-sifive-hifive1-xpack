@@ -1,5 +1,31 @@
 ## SiFive HiFive1 board specific files
 
+This project provides support for the SiFive HiFive1 development board.
+
+## Developer info
+
+This section is intended to developers who plan to include this library in their own projects.
+
+### Prerequisites
+
+A recent [`xpm`](https://www.npmjs.com/package/xpm), which is a portable [Node.js](https://nodejs.org/) command line application.
+
+Compiling the source code requires a modern C++ compiler, preferably GCC 5 or higher. 
+
+### Easy install
+
+This package is available as [`@sifive/hifive1-board`](https://www.npmjs.com/package/@sifive/hifive1-board) from the `npmjs.com` registry; with `xpm` available, installing the latest version of the package is quite easy:
+
+```console
+$ xpm install @sifive/hifive1-board
+```
+
+This package is also available from [GitHub](https://github.com/micro-os-plus/sifive-hifive1-board-xpack):
+
+```console
+$ git clone https://github.com/micro-os-plus/sifive-hifive1-board-xpack.git sifive-hifive1-board-xpack.git
+```
+
 ### How to use
 
 The standard way to include the board files is
@@ -12,35 +38,7 @@ The standard way to include the board files is
 
 * `SIFIVE_HIFIVE1_BOARD`
 
-## Developer info
-
-This section is intended to developers who plan to include this library in their own projects.
-
-### Easy install
-
-This package can be installed from the `npm` [registry](https://www.npmjs.com/package/@sifive/hifive1-board).
-
-```console
-$ xpm install @sifive/hifive1-board
-```
-
-This package is also available from [GitHub](https://github.com/micro-os-plus/sifive-hifive1-board-xpack):
-
-```console
-$ git clone https://github.com/micro-os-plus/sifive-hifive1-board-xpack.git sifive-hifive1-board-xpack.git
-```
-
-### Prerequisites
-
-Installing from `npm` registry requires a recent [Node.js](https://nodejs.org) (>7.x; the 6.x LTS version is not compatible), and the `xpm` tool (https://www.npmjs.com/package/xpm).
-
-```console
-$ sudo npm install xpm --global
-```
-
-On Windows, global packages are installed in the user home folder, and do not require `sudo`.
-
-The source code require a modern C++ compiler, preferably GCC 5 or higher, but was also compiled with GCC 4.8. 
+## Maintainer info
 
 ### How to publish
 
