@@ -2,6 +2,10 @@
 
 Changes in reverse chronological order.
 
+### v1.0.3 (2018-04-16)
+
+* bump deps
+
 ### v1.0.2 (2018-04-16)
 
 * bump deps & move back to npm
