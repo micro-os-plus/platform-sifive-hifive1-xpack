@@ -32,7 +32,7 @@
   },
   "config": {},
   "dependencies": {
-    "@sifive/devices": "~1.0.1"
+    "@sifive/devices": "~1.0.2"
   },
   "xpack": {}
 }
