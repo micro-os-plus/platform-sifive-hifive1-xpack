@@ -4,23 +4,30 @@ This project provides support for the SiFive HiFive1 development board.
 
 ## Developer info
 
-This section is intended to developers who plan to include this library in their own projects.
+This section is intended to developers who plan to include this
+library in their own projects.
 
 ### Prerequisites
 
-A recent [`xpm`](https://www.npmjs.com/package/xpm), which is a portable [Node.js](https://nodejs.org/) command line application.
+A recent [`xpm`](https://www.npmjs.com/package/xpm), which is a portable
+[Node.js](https://nodejs.org/) command line application.
 
-Compiling the source code requires a modern C++ compiler, preferably GCC 5 or higher. 
+Compiling the source code requires a modern C++ compiler, preferably
+GCC 5 or higher.
 
 ### Easy install
 
-This package is available as [`@sifive/hifive1-board`](https://www.npmjs.com/package/@sifive/hifive1-board) from the `npmjs.com` registry; with `xpm` available, installing the latest version of the package is quite easy:
+This package is available as
+[`@sifive/hifive1-board`](https://www.npmjs.com/package/@sifive/hifive1-board)
+from the `npmjs.com` registry; with `xpm` available, installing the
+latest version of the package is quite easy:
 
 ```console
-$ xpm install @sifive/hifive1-board
+$ xpm install @sifive/hifive1-board@latest
 ```
 
-This package is also available from [GitHub](https://github.com/micro-os-plus/sifive-hifive1-board-xpack):
+This package is also available from
+[GitHub](https://github.com/micro-os-plus/sifive-hifive1-board-xpack):
 
 ```console
 $ git clone https://github.com/micro-os-plus/sifive-hifive1-board-xpack.git sifive-hifive1-board-xpack.git
@@ -50,4 +57,6 @@ The standard way to include the board files is
 
 ## License
 
-The original content is released under the [MIT License](https://opensource.org/licenses/MIT), with all rights reserved to [Liviu Ionescu](https://github.com/ilg-ul).
+The original content is released under the
+[MIT License](https://opensource.org/licenses/MIT), with all rights reserved to
+[Liviu Ionescu](https://github.com/ilg-ul).
