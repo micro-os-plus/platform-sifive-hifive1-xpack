@@ -1,4 +1,8 @@
-## SiFive HiFive1 board specific files
+[![license](https://img.shields.io/github/license/micro-os-plus/sifive-hifive1-board-xpack)](https://github.com/micro-os-plus/sifive-hifive1-board-xpack/blob/xpack/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/micro-os-plus/sifive-hifive1-board-xpack.svg)](https://github.com/micro-os-plus/sifive-hifive1-board-xpack/issues)
+[![GitHub pulls](https://img.shields.io/github/issues-pr/micro-os-plus/sifive-hifive1-board-xpack.svg)](https://github.com/micro-os-plus/sifive-hifive1-board-xpack/pulls)
+
+# SiFive HiFive1 board specific files
 
 This project provides support for the SiFive HiFive1 development board.
 
