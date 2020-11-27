@@ -25,50 +25,19 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#ifndef SIFIVE_HIFIVE1_BOARD_FUNCTIONS_INLINES_H_
-#define SIFIVE_HIFIVE1_BOARD_FUNCTIONS_INLINES_H_
+#ifndef MICRO_OS_PLUS_PLATFORM_H_
+#define MICRO_OS_PLUS_PLATFORM_H_
 
-#include <stdint.h>
+#include <micro-os-plus/device.h>
 
-/*
- * HiFive1 support functions.
- *
- * Inline functions are first defined in C (prefixed with `riscv_board_`),
- * then, for convenience, are redefined in C++ in the `riscv::board::`
- * namespace.
- *
- * Regular functions are first defined in C++ then aliased to C.
- */
+#include <micro-os-plus/platform-sifive-hifive1/defines.h>
 
-// ----------------------------------------------------------------------------
-#if defined(__cplusplus)
-extern "C"
-{
-#endif /* defined(__cplusplus) */
+// Include common declarations.
+#include <micro-os-plus/architecture-riscv/platform-functions.h>
+#include <micro-os-plus/architecture-riscv/platform-functions-inlines.h>
 
+// Currently not used.
+// #include <sifive-hifive1-board/functions.h>
+// #include <sifive-hifive1-board/functions-inlines.h>
 
-#if defined(__cplusplus)
-}
-#endif /* defined(__cplusplus) */
-
-// ----------------------------------------------------------------------------
-
-#if defined(__cplusplus)
-
-namespace riscv
-{
-  namespace board
-  {
-    // ------------------------------------------------------------------------
-
-
-  } /* namespace board */
-
-// ----------------------------------------------------------------------------
-} /* namespace riscv */
-
-#endif /* defined(__cplusplus) */
-
-// ----------------------------------------------------------------------------
-
-#endif /* SIFIVE_HIFIVE1_BOARD_FUNCTIONS_INLINES_H_ */
+#endif /* MICRO_OS_PLUS_PLATFORM_H_ */

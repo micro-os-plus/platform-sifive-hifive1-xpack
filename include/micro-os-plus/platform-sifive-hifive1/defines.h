@@ -25,17 +25,17 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#ifndef SIFIVE_HIFIVE1_BOARD_DEFINES_H_
-#define SIFIVE_HIFIVE1_BOARD_DEFINES_H_
+#ifndef MICRO_OS_PLUS_PLATFORM_HIFIVE1_DEFINES_H_
+#define MICRO_OS_PLUS_PLATFORM_HIFIVE1_DEFINES_H_
 
 // ----------------------------------------------------------------------------
 
-#if defined(SIFIVE_HIFIVE1_BOARD)
+#if defined(PLATFORM_SIFIVE_HIFIVE1)
 #else
-#error "Only the SIFIVE_HIFIVE1_BOARD is supported."
-#endif /* _BOARD */
+#error "Only the PLATFORM_SIFIVE_HIFIVE1 is supported."
+#endif
 
-#define RISCV_BOARD_RTC_FREQUENCY_HZ		(32768)
+#define RISCV_PLATFORM_RTC_FREQUENCY_HZ		(32768)
 
 // ----------------------------------------------------------------------------
 // Definitions from SiFive bsp/env/hifive1.h
@@ -98,7 +98,7 @@
 #define HAS_HFXOSC 1
 #define HAS_LFROSC_BYPASS 1
 
-// #define HAS_BOARD_BUTTONS
+// #define HAS_PLATFORM_BUTTONS
 // The HiFive1 board does not have a dedicated user button,
 // but the WAKE button can be connected with an external wire
 // to GPIO18. The button is active low.
@@ -108,4 +108,4 @@
 
 // ----------------------------------------------------------------------------
 
-#endif /* SIFIVE_HIFIVE1_BOARD_DEFINES_H_ */
+#endif /* MICRO_OS_PLUS_PLATFORM_HIFIVE1_DEFINES_H_ */

@@ -40,10 +40,10 @@
 			},
 			"compiler": {
 				"headers": [
-					"<micro-os-plus/board.h>"
+					"<micro-os-plus/platform.h>"
 				],
 				"defines": [
-					"SIFIVE_HIFIVE1_BOARD"
+					"PLATFORM_SIFIVE_HIFIVE1"
 				]
 			}
 		}

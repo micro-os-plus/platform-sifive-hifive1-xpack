@@ -42,12 +42,12 @@ $ git clone https://github.com/micro-os-plus/sifive-hifive1-board-xpack.git sifi
 The standard way to include the board files is
 
 ```c
-#include <micro-os-plus/board.h>
+#include <micro-os-plus/platform.h>
 ```
 
 ### Macros
 
-* `SIFIVE_HIFIVE1_BOARD`
+* `PLATFORM_SIFIVE_HIFIVE1`
 
 ## Maintainer info
 
