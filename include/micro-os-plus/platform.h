@@ -41,3 +41,5 @@
 // #include <sifive-hifive1-board/functions-inlines.h>
 
 #endif /* MICRO_OS_PLUS_PLATFORM_H_ */
+
+// ----------------------------------------------------------------------------
