@@ -28,7 +28,11 @@
 #ifndef MICRO_OS_PLUS_PLATFORM_HIFIVE1_FUNCTIONS_INLINES_H_
 #define MICRO_OS_PLUS_PLATFORM_HIFIVE1_FUNCTIONS_INLINES_H_
 
+// ----------------------------------------------------------------------------
+
 #include <stdint.h>
+
+// ----------------------------------------------------------------------------
 
 /*
  * HiFive1 support functions.
@@ -40,12 +44,10 @@
  * Regular functions are first defined in C++ then aliased to C.
  */
 
-// ----------------------------------------------------------------------------
 #if defined(__cplusplus)
 extern "C"
 {
 #endif /* defined(__cplusplus) */
-
 
 #if defined(__cplusplus)
 }
@@ -61,11 +63,10 @@ namespace riscv
   {
     // ------------------------------------------------------------------------
 
+  }
 
-  } /* namespace board */
-
-// ----------------------------------------------------------------------------
-} /* namespace riscv */
+  // --------------------------------------------------------------------------
+} // namespace riscv
 
 #endif /* defined(__cplusplus) */
 
