@@ -33,8 +33,8 @@
 #include <micro-os-plus/platform-sifive-hifive1/defines.h>
 
 // Include common declarations.
-#include <micro-os-plus/architecture-riscv/platform-functions-inlines.h>
 #include <micro-os-plus/architecture-riscv/platform-functions.h>
+#include <micro-os-plus/architecture-riscv/platform-functions-inlines.h>
 
 // Currently not used.
 // #include <sifive-hifive1-board/functions.h>
