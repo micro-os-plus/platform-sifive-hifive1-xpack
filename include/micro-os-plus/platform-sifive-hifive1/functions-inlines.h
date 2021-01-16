@@ -47,11 +47,11 @@
 #if defined(__cplusplus)
 extern "C"
 {
-#endif /* defined(__cplusplus) */
+#endif // defined(__cplusplus)
 
 #if defined(__cplusplus)
 }
-#endif /* defined(__cplusplus) */
+#endif // defined(__cplusplus)
 
 // ----------------------------------------------------------------------------
 
@@ -68,10 +68,10 @@ namespace riscv
   // --------------------------------------------------------------------------
 } // namespace riscv
 
-#endif /* defined(__cplusplus) */
+#endif // defined(__cplusplus)
 
 // ----------------------------------------------------------------------------
 
-#endif /* MICRO_OS_PLUS_PLATFORM_HIFIVE1_FUNCTIONS_INLINES_H_ */
+#endif // MICRO_OS_PLUS_PLATFORM_HIFIVE1_FUNCTIONS_INLINES_H_
 
 // ----------------------------------------------------------------------------
