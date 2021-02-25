@@ -9,37 +9,72 @@
 #
 # -----------------------------------------------------------------------------
 
+if(xpack-sifive-platform-hifive1-included)
+  return()
+endif()
+
+set(xpack-sifive-platform-hifive1-included TRUE)
+
 message(STATUS "Including xpack-sifive-platform-hifive1...")
 
 # -----------------------------------------------------------------------------
+# Preprocessor symbols.
 
-function(target_sources_xpack_sifive_platform_hifive1 target)
-
-  get_filename_component(xpack_root_folder ${CMAKE_CURRENT_FUNCTION_LIST_DIR} DIRECTORY)
-
-  target_sources(
-    ${target}
-
-    PRIVATE
-      ${xpack_root_folder}/src/platform-functions.cpp
-      ${xpack_root_folder}/src/trace-uart.cpp
-  )
-
-endfunction()
+set(xpack_platform_compile_definition "PLATFORM_SIFIVE_HIFIVE1")
+message(STATUS "${xpack_platform_compile_definition}")
 
 # -----------------------------------------------------------------------------
 
-function(target_include_directories_xpack_sifive_platform_hifive1 target)
+  find_package(xpack-sifive-devices REQUIRED)
+  find_package(micro-os-plus-diag-trace REQUIRED)
 
-  get_filename_component(xpack_root_folder ${CMAKE_CURRENT_FUNCTION_LIST_DIR} DIRECTORY)
+# -----------------------------------------------------------------------------
 
-  target_include_directories(
-    ${target}
+  get_filename_component(xpack_current_folder ${CMAKE_CURRENT_LIST_DIR} DIRECTORY)
 
-    PRIVATE
-      ${xpack_root_folder}/include
-  )
+  # ---------------------------------------------------------------------------
 
-endfunction()
+  if(NOT TARGET xpack-sifive-platform-hifive1-interface)
+
+    add_library(xpack-sifive-platform-hifive1-interface INTERFACE EXCLUDE_FROM_ALL)
+
+    target_sources(
+      xpack-sifive-platform-hifive1-interface
+  
+      INTERFACE
+        ${xpack_current_folder}/src/platform-functions.cpp
+        ${xpack_current_folder}/src/trace-uart.cpp
+    )
+  
+    target_include_directories(
+      xpack-sifive-platform-hifive1-interface
+  
+      INTERFACE
+        ${xpack_current_folder}/include
+    )
+
+    target_compile_definitions(
+      xpack-sifive-devices-interface
+  
+      INTERFACE
+        ${xpack_platform_compile_definition}
+    )
+
+    target_link_libraries(
+      xpack-sifive-platform-hifive1-interface
+
+      INTERFACE
+        sifive::devices
+        micro-os-plus::architecture-riscv-platform
+        micro-os-plus::diag-trace-static
+    )
+
+    # -------------------------------------------------------------------------
+    # Aliases.
+
+    add_library(sifive::platform-hifive1 ALIAS xpack-sifive-platform-hifive1-interface)
+    message(STATUS "sifive::platform-hifive1")
+
+  endif()
 
 # -----------------------------------------------------------------------------
