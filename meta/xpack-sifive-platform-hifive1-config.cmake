@@ -12,11 +12,72 @@
 # https://cmake.org/cmake/help/v3.18/
 # https://cmake.org/cmake/help/v3.18/manual/cmake-packages.7.html#package-configuration-file
 
-# message(STATUS "Including sifive-devices-config...")
+if(xpack-sifive-platform-hifive1-included)
+  return()
+endif()
+
+set(xpack-sifive-platform-hifive1-included TRUE)
+
+message(STATUS "Including xpack-sifive-platform-hifive1...")
+
+# -----------------------------------------------------------------------------
+# Preprocessor symbols.
+
+set(xpack_platform_compile_definition "PLATFORM_SIFIVE_HIFIVE1")
+message(STATUS "${xpack_platform_compile_definition}")
 
 # -----------------------------------------------------------------------------
 
-include("${CMAKE_CURRENT_LIST_DIR}/xpack-helper.cmake")
+find_package(xpack-sifive-devices REQUIRED)
+find_package(micro-os-plus-diag-trace REQUIRED)
 
 # -----------------------------------------------------------------------------
 
+get_filename_component(xpack_current_folder ${CMAKE_CURRENT_LIST_DIR} DIRECTORY)
+
+# -----------------------------------------------------------------------------
+
+if(NOT TARGET xpack-sifive-platform-hifive1-interface)
+
+  add_library(xpack-sifive-platform-hifive1-interface INTERFACE EXCLUDE_FROM_ALL)
+
+  target_sources(
+    xpack-sifive-platform-hifive1-interface
+
+    INTERFACE
+      ${xpack_current_folder}/src/platform-functions.cpp
+      ${xpack_current_folder}/src/trace-uart.cpp
+  )
+
+  target_include_directories(
+    xpack-sifive-platform-hifive1-interface
+
+    INTERFACE
+      ${xpack_current_folder}/include
+  )
+
+  target_compile_definitions(
+    xpack-sifive-devices-interface
+
+    INTERFACE
+      ${xpack_platform_compile_definition}
+  )
+
+  target_link_libraries(
+    xpack-sifive-platform-hifive1-interface
+
+    INTERFACE
+      sifive::devices
+      micro-os-plus::architecture-riscv-platform
+      micro-os-plus::diag-trace-static
+  )
+
+  # ---------------------------------------------------------------------------
+  # Aliases.
+
+  add_library(sifive::platform-hifive1 ALIAS xpack-sifive-platform-hifive1-interface)
+  message(STATUS "sifive::platform-hifive1")
+
+endif()
+
+# -----------------------------------------------------------------------------
