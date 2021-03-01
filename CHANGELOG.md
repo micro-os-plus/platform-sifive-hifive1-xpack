@@ -6,70 +6,87 @@ Please check
 [GitHub](https://github.com/micro-os-plus/platform-sifive-hifive1-xpack/issues/)
 and close existing issues and pull requests.
 
-## v1.1.0 (2021-02-04)
+## 2021-03-01
 
+- v2.0.0
+
+## 2021-02-28
+
+- rename micro_os_plus
+
+## 2021-02-04
+
+- v1.1.0
 - first restructured release
 
-## v1.0.4 (2020-09-18)
+## 2020-09-18
 
+- v1.0.4
 - bump device to 1.0.3
 
-## v1.0.3 (2018-04-16)
+## 2018-04-16
 
+- v1.0.3
 - bump deps
-
-## v1.0.2 (2018-04-16)
-
+- v1.0.2
 - bump deps & move back to npm
 - update README developer info
 
-## v1.0.1 (2018-01-25)
+## 2018-01-25
 
+- v1.0.1
 - update dependencies
 
-## v1.0.0 (2018-01-24)
+## 2018-01-24
 
-### 2017-12-30
+- v1.0.0
+
+## 2017-12-30
 
 - add license & copyright
 
-### 2017-12-27
+## 2017-12-27
 
 - update xcdl to 0.2.0
   - simplify supplier
   - rename compiler
   - rename defines
 
-### 2017-12-12
+## 2017-12-12
 
 - [#2] trace-uart.cpp: replace bitfields with masks
 
-### 2017-12-08
+## 2017-12-08
 
 - rework boards xcdl
   - rename "vendor" -> "supplier"
   - use "displayName" for boards
 
-## v1.1.0 (2017-10-26)
+## 2017-10-26
 
+- v1.1.0
 - update for new GitHub names
 - package.json: remove scripts.link
 
-## v0.0.5 (2017-10-04)
+## 2017-10-04
 
+- v0.0.5
 - package.json clean-ups
 - add CHANGELOG.md
 - preliminary metadata added (xcdl)
 
-## v0.0.4 (2017-09-18)
+## 2017-09-18
 
+- v0.0.4
 - package.json: add "scripts.link"
 
-## v0.0.3 (2017-09-10)
+## 2017-09-10
 
+- v0.0.3
 - trace-uart.cpp: use new typedefs
 
-## v0.0.2, v0.0.1 (2017-09-05)
+## 2017-09-05
 
+- v0.0.2
+- v0.0.1
 - initial version, copied from Eclipse templates.
-
