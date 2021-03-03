@@ -18,7 +18,7 @@ endif()
 
 set(xpack-sifive-platform-hifive1-included TRUE)
 
-message(STATUS "Including xpack-sifive-platform-hifive1...")
+message(STATUS "Processing xPack ${PACKAGE_JSON_NAME}@${PACKAGE_JSON_VERSION}...")
 
 # -----------------------------------------------------------------------------
 # Preprocessor symbols.
