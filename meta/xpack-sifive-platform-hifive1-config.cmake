@@ -76,7 +76,7 @@ if(NOT TARGET xpack-sifive-platform-hifive1-interface)
   # Aliases.
 
   add_library(sifive::platform-hifive1 ALIAS xpack-sifive-platform-hifive1-interface)
-  message(STATUS "sifive::platform-hifive1")
+  message(STATUS "=> sifive::platform-hifive1")
 
 endif()
 
