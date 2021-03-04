@@ -41,12 +41,20 @@ if(NOT TARGET xpack-sifive-platform-hifive1-interface)
 
   add_library(xpack-sifive-platform-hifive1-interface INTERFACE EXCLUDE_FROM_ALL)
 
+  # -------------------------------------------------------------------------
+
+  set(source_files
+    ${xpack_current_folder}/src/platform-functions.cpp
+    ${xpack_current_folder}/src/trace-uart.cpp
+  )
+
+  xpack_display_relative_paths("${source_files}" "${xpack_current_folder}")
+
   target_sources(
     xpack-sifive-platform-hifive1-interface
 
     INTERFACE
-      ${xpack_current_folder}/src/platform-functions.cpp
-      ${xpack_current_folder}/src/trace-uart.cpp
+      ${source_files}
   )
 
   target_include_directories(
