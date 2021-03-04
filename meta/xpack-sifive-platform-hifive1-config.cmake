@@ -78,7 +78,7 @@ if(NOT TARGET xpack-sifive-platform-hifive1-interface)
     INTERFACE
       sifive::devices
       micro-os-plus::architecture-riscv-platform
-      micro-os-plus::diag-trace-static
+      micro-os-plus::diag-trace
   )
 
   # ---------------------------------------------------------------------------
