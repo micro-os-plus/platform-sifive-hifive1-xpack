@@ -24,7 +24,6 @@ message(STATUS "Processing xPack ${PACKAGE_JSON_NAME}@${PACKAGE_JSON_VERSION}...
 # Preprocessor symbols.
 
 set(xpack_platform_compile_definition "PLATFORM_SIFIVE_HIFIVE1")
-message(STATUS "${xpack_platform_compile_definition}")
 
 # -----------------------------------------------------------------------------
 
@@ -63,6 +62,8 @@ if(NOT TARGET xpack-sifive-platform-hifive1-interface)
     INTERFACE
       ${xpack_current_folder}/include
   )
+
+  message(STATUS "+ ${xpack_platform_compile_definition}")
 
   target_compile_definitions(
     xpack-sifive-devices-interface
