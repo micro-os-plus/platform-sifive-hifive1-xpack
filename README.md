@@ -35,22 +35,22 @@ Note: the package will be available from npmjs.com at a later date.
 
 For now, it can be installed from GitHub:
 
-```console
-$ cd <project>
-$ xpm init # Unless a package.json is already present
+```sh
+cd my-project
+xpm init # Unless a package.json is already present
 
-$ xpm install github:micro-os-plus/platform-sifive-hifive1-xpack
+xpm install github:micro-os-plus/platform-sifive-hifive1-xpack
 ```
 
 When ready, this package will be available as
 [`@xpack-sifive/platform-hifive1`](https://www.npmjs.com/package/@xpack-sifive/platform-hifive1)
 from the `npmjs.com` registry:
 
-```console
-$ cd <project>
-$ xpm init # Unless a package.json is already present
+```sh
+cd my-project
+xpm init # Unless a package.json is already present
 
-$ xpm install @xpack-sifive/platform-hifive1@latest
+xpm install @xpack-sifive/platform-hifive1@latest
 ```
 
 ### Git submodule
@@ -58,12 +58,12 @@ $ xpm install @xpack-sifive/platform-hifive1@latest
 If, for any reason, **xpm** is not available, the next recommended
 solution is to link it as a Git submodule below an `xpacks` folder.
 
-```console
-$ cd <project>
-$ git init # Unless already a Git project
-$ mkdir -p xpacks
+```sh
+cd my-project
+git init # Unless already a Git project
+mkdir -p xpacks
 
-$ git submodule add https://github.com/micro-os-plus/platform-sifive-hifive1-xpack.git \
+git submodule add https://github.com/micro-os-plus/platform-sifive-hifive1-xpack.git \
   xpacks/micro-os-plus-platform-sifive-hifive1
 ```
 

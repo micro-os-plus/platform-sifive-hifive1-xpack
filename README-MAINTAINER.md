@@ -9,7 +9,7 @@
 
 The project is hosted on GitHub:
 
-- https://github.com/micro-os-plus/platform-sifive-hifive1-xpack.git
+- <https://github.com/micro-os-plus/platform-sifive-hifive1-xpack.git>
 
 To clone it:
 
@@ -60,7 +60,7 @@ as:
 
 The version is visible at:
 
-- https://www.npmjs.com/package/@xpack-sifive/platform-hifive1?activeTab=versions
+- <https://www.npmjs.com/package/@xpack-sifive/platform-hifive1?activeTab=versions>
 
 ## Testing
 
