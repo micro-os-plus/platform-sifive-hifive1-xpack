@@ -11,12 +11,18 @@
 
 # https://cmake.org/cmake/help/v3.19/
 # https://cmake.org/cmake/help/v3.19/manual/cmake-packages.7.html#package-configuration-file
+cmake_minimum_required(VERSION 3.19)
 
-if(xpack-sifive-platform-hifive1-included)
+# Use targets as include markers (variables are not scope independent).
+if(TARGET xpack-sifive-platform-hifive1-included)
   return()
+else()
+  add_custom_target(xpack-sifive-platform-hifive1-included)
 endif()
 
-set(xpack-sifive-platform-hifive1-included TRUE)
+if(NOT TARGET micro-os-plus-build-helper-included)
+  message(FATAL_ERROR "Include the mandatory build-helper (xpacks/micro-os-plus-build-helper/cmake/xpack-helper.cmake)")
+endif()
 
 message(STATUS "Processing xPack ${PACKAGE_JSON_NAME}@${PACKAGE_JSON_VERSION}...")
 
