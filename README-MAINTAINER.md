@@ -14,17 +14,21 @@ The project is hosted on GitHub:
 To clone it:
 
 ```sh
+rm -rf ~/Work/platform-sifive-hifive1-xpack.git && \
+mkdir -p ~/Work && \
 git clone \
   https://github.com/micro-os-plus/platform-sifive-hifive1-xpack.git \
-  platform-sifive-hifive1-xpack.git
+  ~/Work/platform-sifive-hifive1-xpack.git
 ```
 
 For development purposes, clone the `xpack-develop` branch:
 
 ```sh
+rm -rf ~/Work/platform-sifive-hifive1-xpack.git && \
+mkdir -p ~/Work && \
 git clone \
   https://github.com/micro-os-plus/platform-sifive-hifive1-xpack.git \
-  platform-sifive-hifive1-xpack.git
+  ~/Work/platform-sifive-hifive1-xpack.git
 ```
 ## Prerequisites
 
