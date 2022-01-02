@@ -14,9 +14,18 @@ The project is hosted on GitHub:
 To clone it:
 
 ```sh
-git clone https://github.com/micro-os-plus/platform-sifive-hifive1-xpack.git platform-sifive-hifive1-xpack.git
+git clone \
+  https://github.com/micro-os-plus/platform-sifive-hifive1-xpack.git \
+  platform-sifive-hifive1-xpack.git
 ```
 
+For development purposes, clone the `xpack-develop` branch:
+
+```sh
+git clone \
+  https://github.com/micro-os-plus/platform-sifive-hifive1-xpack.git \
+  platform-sifive-hifive1-xpack.git
+```
 ## Prerequisites
 
 A recent [xpm](https://xpack.github.io/xpm/), which is a portable
@@ -49,7 +58,9 @@ as:
 
 - select the `xpack-develop` branch
 - commit all changes
-- update `CHANGELOG.md`; commit with a message like _CHANGELOG: prepare v2.0.1_
+- update versions in `README.md` and `README-MAINTAINER.md`
+- update `CHANGELOG.md`
+- commit with a message like _prepare v2.0.1_
 - `npm pack` and check the content of the archive, which should list
   only the `package.json`, the `README.md`, `LICENSE` and `CHANGELOG.md`;
   possibly adjust `.npmignore`
