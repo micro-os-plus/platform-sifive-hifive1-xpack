@@ -70,6 +70,8 @@ as:
   possibly adjust `.npmignore`
 - `npm version patch`, `npm version minor`, `npm version major`
 - push the `xpack-develop` branch to GitHub with `git push origin --tags`
+- wait for the CI job to complete
+  (<https://github.com/micro-os-plus/platform-sifive-hifive1-xpack/actions/workflows/CI.yml>)
 - `npm publish --tag next` (use `--access public` when publishing for
   the first time)
 
