@@ -46,7 +46,7 @@ if(NOT TARGET xpack-sifive-platform-hifive1-interface)
 
   add_library(xpack-sifive-platform-hifive1-interface INTERFACE EXCLUDE_FROM_ALL)
 
-  # -------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 
   set(source_files
     ${xpack_current_folder}/src/platform-functions.cpp
@@ -87,7 +87,7 @@ if(NOT TARGET xpack-sifive-platform-hifive1-interface)
       micro-os-plus::diag-trace
   )
 
-  # ---------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
   # Aliases.
 
   add_library(sifive::platform-hifive1 ALIAS xpack-sifive-platform-hifive1-interface)
