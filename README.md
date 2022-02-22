@@ -1,7 +1,7 @@
 [![license](https://img.shields.io/github/license/micro-os-plus/platform-sifive-hifive1-xpack)](https://github.com/micro-os-plus/platform-sifive-hifive1-xpack/blob/xpack/LICENSE)
 [![CI on Push](https://github.com/micro-os-plus/platform-sifive-hifive1-xpack/workflows/CI%20on%20Push/badge.svg)](https://github.com/micro-os-plus/platform-sifive-hifive1-xpack/actions?query=workflow%3A%22CI+on+Push%22)
 
-# A source xPack with the µOS++ SiFive HiFive1 board specific files
+# A source library xPack with the µOS++ SiFive HiFive1 board specific files
 
 This project provides support for the SiFive HiFive1 development board.
 
@@ -18,8 +18,8 @@ For maintainer infos, please see the
 
 ## Install
 
-As a source xPacks, the easiest way to add it to a project is via **xpm**,
-but it can also be used as any Git project, for example as a submodule.
+As a source library xPacks, the easiest way to add it to a project is via
+**xpm**, but it can also be used as any Git project, for example as a submodule.
 
 ### Prerequisites
 
