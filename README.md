@@ -51,6 +51,8 @@ cd my-project
 xpm init # Unless a package.json is already present
 
 xpm install @xpack-sifive/platform-hifive1@latest
+
+ls -l xpacks/xpack-sifive-platform-hifive1
 ```
 
 ### Git submodule
