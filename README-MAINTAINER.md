@@ -117,10 +117,6 @@ When the release is considered stable, promote it as `latest`:
 - `npm dist-tag add @xpack-sifive/platform-hifive1@2.0.1 latest`
 - `npm dist-tag ls @xpack-sifive/platform-hifive1`
 
-## Announce to the community
-
-Post an announcement to the forum.
-
 ## Share on Twitter
 
 - in a separate browser windows, open [TweetDeck](https://tweetdeck.twitter.com/)
