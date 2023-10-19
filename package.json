@@ -1,7 +1,7 @@
 {
   "name": "@xpack-sifive/platform-hifive1",
   "version": "2.0.1",
-  "description": "A source library xPack with the µOS++ support for the SiFive HiFive1 board",
+  "description": "A source code library with the µOS++ support for the SiFive HiFive1 board",
   "main": "",
   "scripts": {
     "npm-install": "npm install",
