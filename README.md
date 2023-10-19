@@ -4,7 +4,7 @@
 [![license](https://img.shields.io/github/license/micro-os-plus/platform-sifive-hifive1-xpack)](https://github.com/micro-os-plus/platform-sifive-hifive1-xpack/blob/xpack/LICENSE)
 [![CI on Push](https://github.com/micro-os-plus/platform-sifive-hifive1-xpack/actions/workflows/ci.yml/badge.svg)](https://github.com/micro-os-plus/platform-sifive-hifive1-xpack/actions/workflows/ci.yml)
 
-# A source library xPack with the µOS++ SiFive HiFive1 board specific files
+# A source code library with the µOS++ SiFive HiFive1 board specific files
 
 This project provides support for the SiFive HiFive1 development board.
 
@@ -165,7 +165,7 @@ are:
 
 ## License
 
-The original content is released under the
-[MIT License](https://opensource.org/licenses/MIT/),
+Unless otherwise stated, the content is released under the terms of the
+[MIT License](https://opensource.org/licenses/mit/),
 with all rights reserved to
 [Liviu Ionescu](https://github.com/ilg-ul).
